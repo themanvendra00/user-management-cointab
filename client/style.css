@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#controls {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.myBtn {
+  padding: 8px 40px;
+}
+
+.primary {
+  background-color: #198754;
+}
+
+.danger {
+  background-color: #dc3545;
+}
+
+.warning {
+  background-color: #ffc107;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+  margin: auto;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+thead {
+  background-color: #ffc107;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+img {
+  width: 50px;
+}
+
+#filter-container {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#filter-container div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  height: 100px;
+}
+
+.pagination-container button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #8b8b8b;
+  color: #fff;
+  background: #2a2a2a;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.pagination-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

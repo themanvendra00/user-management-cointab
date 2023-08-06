@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
+  <title>User Detail Page | page - 2 | Cointab</title>
+</head>
+
+<body>
+  <h1 class="heading">User Detail Page</h1>
+  <div id="filter-container">
+    <div>
+      <p>Filter By Age :</p>
+      <select name="gender" id="genderFilter" onchange="filterByGender()">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div>
+      <button class="myBtn"><a href="index.html">Home</a></button>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <th>S.No.</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Phone</th>
+      <th>Avatar</th>
+    </thead>
+    <tbody id="users"></tbody>
+  </table>
+
+  <div class="pagination-container">
+    <button id="prevBtn" onclick="changePage(-1)" disabled><i class="fa-solid fa-angle-left"></i></button>
+    <p id="currentPageNo">1</p>
+    <button id="nextBtn" onclick="changePage(1)" disabled><i class="fa-solid fa-angle-right"></i></button>
+  </div>
+
+  <script src="userDetail.js"></script>
+</body>
+
+</html>
