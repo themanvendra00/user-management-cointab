@@ -24,7 +24,7 @@ fetchBtn.addEventListener("click", () => {
     });
   } else {
     loading = true;
-    fetch("http://localhost:5000/api/users/fetch-users", {
+    fetch("https://olive-worm-cap.cyclic.app/api/users/fetch-users", {
       method: "POST",
     })
       .then((res) => res.json())
@@ -57,7 +57,7 @@ deleteBtn.addEventListener("click", () => {
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch("http://localhost:5000/api/users/delete-users", {
+      fetch("https://olive-worm-cap.cyclic.app/api/users/delete-users", {
         method: "DELETE",
       })
         .then((res) => res.json())

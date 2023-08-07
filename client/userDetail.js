@@ -5,7 +5,7 @@ const nextBtn = document.getElementById("nextBtn");
 let currentPage = 1;
 
 function fetchUserFromDatabase(page,gender) {
-  fetch(`http://localhost:5000/api/users/user-details?page=${page}&gender=${gender}`)
+  fetch(`https://olive-worm-cap.cyclic.app/api/users/user-details?page=${page}&gender=${gender}`)
     .then((res) => res.json())
     .then((data) => {
       let user = data.results;
