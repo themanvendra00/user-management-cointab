@@ -5,7 +5,7 @@ const User = require("../models/user");
 const router = express.Router();
 
 router.post("/fetch-users", async (req, res) => {
-  const transaction = await sequelize.transaction();
+  // const transaction = await sequelize.transaction();
   
   try {
     await User.sync();
@@ -24,30 +24,30 @@ router.post("/fetch-users", async (req, res) => {
         phone: user.phone,
         picture: user.picture.large,
       };
-      await User.create(result, { transaction });
+      await User.create(result, /** { transaction } */);
     });
 
     await Promise.all(userPromises);
-    await transaction.commit();
+    // await transaction.commit();
 
     res.json({ message: "Users fetched and stored in the database." });
   } catch (error) {
     console.error(error);
-    await transaction.rollback();
+    // await transaction.rollback();
     res.status(500).json({ error: "An error occurred while fetching users." });
   }
 });
 
 router.delete("/delete-users", async (req, res) => {
-  const transaction = await sequelize.transaction();
+  // const transaction = await sequelize.transaction();
 
   try {
-    await User.destroy({ where: {}, transaction });
-    await transaction.commit();
+    await User.destroy({ where: {}, /** transaction */ });
+    // await transaction.commit();
     res.json({ message: "All users deleted from the database." });
   } catch (error) {
     console.error(error);
-    await transaction.rollback();
+    // await transaction.rollback();
     res.status(500).json({ error: "An error occurred while deleting users." });
   }
 });
